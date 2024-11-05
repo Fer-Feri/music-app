@@ -1,0 +1,225 @@
+/** @format */
+
+.store__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+
+  .store__card_box {
+    width: 100%;
+    // min-height: 15rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    border-radius: 2rem;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+    padding-right: 2rem;
+
+    span {
+      background-color: #880088;
+      align-self: stretch;
+      text-align: left;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-block: 1rem;
+      letter-spacing: 0.1rem;
+      font-weight: 700;
+    }
+
+    .store__card_content {
+      // width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: end;
+      gap: 2rem;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 1.3rem;
+        padding: 2.6rem;
+
+        li {
+          list-style: disc;
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    .store__button {
+      width: fit-content;
+      display: flex;
+      padding: 1rem 1.5rem;
+      gap: 0.4rem;
+      border: none;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+      background: linear-gradient(
+          15deg,
+          #880088,
+          #aa2068,
+          #cc3f47,
+          #de6f3d,
+          #f09f33,
+          #de6f3d,
+          #cc3f47,
+          #aa2068,
+          #880088
+        )
+        no-repeat;
+      background-size: 300%;
+      background-position: left center;
+      transition: background 0.3s ease;
+      color: #fff;
+
+      svg {
+        width: 23px;
+        fill: #f09f33;
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        background-size: 320%;
+        background-position: right center;
+      }
+
+      &:hover {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  // ----------------
+  // ----------------
+  // ----------------
+  .store__card_box:nth-child(1) {
+    span {
+      background: linear-gradient(
+        45deg,
+        #d45ea3,
+        #ce3b91,
+        #ae2b78,
+        #9f2f70,
+        #bb458a,
+        #aa2f77,
+        #ae2b78,
+        #ce3b91,
+        #d45ea3
+      );
+    }
+
+    .store__button {
+      background: linear-gradient(
+        15deg,
+        #fd68bf,
+        #bd217c,
+        #bd217c,
+        #d0298b,
+        #e33e9f,
+        #d0298b,
+        #c42582fb,
+        #bd217c,
+        #fe6dc1
+      );
+
+      &:hover {
+        background-size: 400%;
+        background-position: right center;
+      }
+    }
+  }
+  .store__card_box:nth-child(2) {
+    span {
+      background: linear-gradient(
+        45deg,
+        #880088,
+        #aa2068,
+        #cc3f47,
+        #de6f3d,
+        #f09f33,
+        #de6f3d,
+        #cc3f47,
+        #aa2068,
+        #880088
+      );
+    }
+  }
+  .store__card_box:nth-child(3) {
+    span {
+      background: linear-gradient(
+        15deg,
+        #875aee,
+        #774ed8,
+        #5e36bd,
+        #572cbd,
+        #4d25ae,
+        #572cbd,
+        #5e36bd,
+        #774ed8,
+        #875aee
+      );
+    }
+
+    .store__button {
+      background: linear-gradient(
+        15deg,
+        #880088,
+        #7734c4a5,
+        #5741d7a5,
+        #6e41d7a5,
+        #6135caa5,
+        #7543eaa5,
+        #5741d7a5,
+        #7734c4a5,
+        #880088
+      );
+
+      &:hover {
+        background-size: 400%;
+        background-position: right center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .store__container {
+    .store__card_box {
+      flex-direction: column;
+      padding-right: 0;
+
+      span {
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+        padding-block: 1rem;
+      }
+
+      .store__button {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

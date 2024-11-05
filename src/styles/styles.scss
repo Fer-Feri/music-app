@@ -1,0 +1,97 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..900&display=swap");
+
+@import "./variables.scss";
+@import "./reset.scss";
+
+@import "../pages/trends/trends.scss";
+@import "../components/navbar/navbar.scss";
+@import "../components/musicPlayer/musicPlayer.scss";
+@import "../components/sidebar/sidebar.scss";
+@import "../components/searchInput/searchInput.scss";
+@import "../components/slider/slider.scss";
+@import "../components/loading/loading.scss";
+@import "../components/error/error.scss";
+@import "../components/noSong/noSong.scss";
+@import "../components/modalBtn/modalBtn.scss";
+@import "../components/commentForm/commentForm.scss";
+@import "../components/search/searchSongs.scss";
+
+@import "../pages/content/content.scss";
+@import "../pages/trends/trends.scss";
+@import "../pages/Artist/artist.scss";
+@import "../pages/songs/songs.scss";
+@import "../pages/album/album.scss";
+@import "../pages/store/store.scss";
+@import "../pages/like/like.scss";
+@import "../pages/browse/browse.scss";
+@import "../pages/comment/comment.scss";
+@import "../pages/notFound/notFound.scss";
+
+.app {
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+}
+
+.title-content-container {
+  width: 100%;
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  cursor: default;
+  color: var(--color-white);
+
+  span {
+    font-size: 1.3rem;
+    color: #fe476e;
+    cursor: pointer;
+  }
+}
+
+.title-content {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+
+  svg {
+    color: var(--pink-light);
+  }
+}
+
+.contentContainer {
+  display: flex;
+  height: calc(100% - 9.6rem);
+}
+
+.main {
+  background-color: black;
+  flex-basis: 90%;
+  display: flex;
+  // flex-wrap: wrap;
+}
+
+.no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20rem;
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .title-content {
+    font-size: 1.3rem;
+  }
+}

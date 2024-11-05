@@ -1,0 +1,49 @@
+/** @format */
+
+.title__mood {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+  margin-top: 5rem;
+
+  .title {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}
+
+/* <div className="browse">
+{songs.map((song) => (
+  <div key={song.id} className="artist-section">
+    <div className="title__mood">
+      <h2 className="title">
+        {song.artist ? song.artist.name : "نام هنرمند موجود نیست"}
+        <img
+          src={song.artist ? song.artist.picture_small : ""}
+          alt={song.artist ? song.artist.name : "ناشناس"}
+        />
+      </h2>
+    </div>
+    <div className="songs-row">
+      <div className="card-song">
+        <FontAwesomeIcon icon={faPlay} />
+        <div className="song__cover">
+          <img src={song.album ? song.album.cover : song.md5_image} alt={song.title} />
+        </div>
+        <div className="song__details">
+          <p>{song.title}</p>
+          <p>{song.artist ? song.artist.name : "نام هنرمند موجود نیست"}</p>
+        </div>
+        <div className="heartIcon">
+          <FontAwesomeIcon icon={faHeart} />
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+</div> */

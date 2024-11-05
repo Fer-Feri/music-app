@@ -1,0 +1,17 @@
+/** @format */
+
+.content {
+  background: rgb(227, 62, 159);
+  background: var(--content-color);
+  flex-basis: 70%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 3rem 1.5rem;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    flex-basis: 60%;
+  }
+}

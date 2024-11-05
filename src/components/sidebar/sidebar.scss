@@ -1,0 +1,474 @@
+/** @format */
+
+.sidebar {
+  background-color: var(--main-color);
+  flex-basis: 30%;
+  padding: 2.5rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  display: flex;
+  flex-direction: column;
+
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1.5rem;
+
+    svg {
+      background: rgba(15, 13, 32, 1);
+      background: linear-gradient(
+        0deg,
+        rgba(227, 62, 159, 1) 0%,
+        rgba(123, 38, 97, 1) 0%,
+        rgba(69, 26, 65, 1) 9%,
+        rgba(15, 13, 32, 1) 100%
+      );
+      padding: 0.7rem 0.9rem;
+      border-radius: 100%;
+      border: 1px solid rgb(136, 45, 127);
+      cursor: pointer;
+    }
+
+    .user {
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      img {
+        width: 100%;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .currentSongPlay {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.4rem;
+
+    height: auto;
+
+    .title {
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      span {
+        font-weight: 900;
+        font-size: 1.7rem;
+      }
+    }
+
+    .songCard {
+      border: 1px solid #4e25aeb9;
+      border-bottom-color: var(--pink-color);
+      border-radius: 2rem;
+      padding-block: 1.5rem;
+      margin-top: 1rem;
+
+      background: rgb(15, 13, 32);
+      background: var(--song-card);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+
+      .songTitle {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-block: 1.5rem;
+        letter-spacing: 0.2rem;
+        padding: 0.9rem;
+        max-width: 20rem;
+        color: var(--color-white);
+      }
+
+      .songDetails {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        color: var(--font-color-gray);
+        gap: 3rem;
+
+        p {
+          max-width: 10rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          svg {
+            margin-right: 0.6rem;
+            color: var(--pink-color);
+          }
+        }
+      }
+
+      .waveMenu {
+        border-radius: 50px;
+        min-width: 20rem;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 1rem;
+        cursor: default;
+        transition: ease 0.2s;
+        position: relative;
+
+        .curSongImg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 5.1rem;
+          height: 5.1rem;
+          z-index: 1;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+          }
+        }
+
+        li {
+          list-style: none;
+          height: 30px;
+          width: 2px;
+          border-radius: 10px;
+          background: var(--purple-color);
+          margin: 0 6px;
+          padding: 0;
+          animation-name: wave1;
+          animation-duration: 0.3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          transition: ease 0.2s;
+
+          &:nth-child(2) {
+            animation-name: wave2;
+            animation-delay: 0.2s;
+          }
+
+          &:nth-child(3) {
+            animation-name: wave3;
+            animation-delay: 0.23s;
+            animation-duration: 0.4s;
+          }
+
+          &:nth-child(4) {
+            animation-name: wave4;
+            animation-delay: 0.1s;
+            animation-duration: 0.3s;
+          }
+
+          &:nth-child(5) {
+            animation-delay: 0.5s;
+          }
+
+          &:nth-child(6) {
+            animation-name: wave2;
+            animation-duration: 0.5s;
+          }
+
+          &:nth-child(8) {
+            animation-name: wave4;
+            animation-delay: 0.4s;
+            animation-duration: 0.25s;
+          }
+
+          &:nth-child(9) {
+            animation-name: wave3;
+            animation-delay: 0.15s;
+          }
+
+          &:nth-child(10) {
+            animation-name: wave2;
+            animation-delay: 0.2s;
+          }
+
+          &:nth-child(11) {
+            animation-name: wave3;
+            animation-delay: 0.15s;
+          }
+
+          &:nth-child(12) {
+            animation-name: wave4;
+            animation-delay: 0.4s;
+            animation-duration: 0.25s;
+          }
+
+          &:nth-child(13) {
+            animation-delay: 0.5s;
+          }
+
+          &:nth-child(14) {
+            animation-name: wave2;
+            animation-delay: 0.15s;
+          }
+
+          &:nth-child(15) {
+            animation-name: wave3;
+            animation-delay: 0.15s;
+          }
+
+          @keyframes wave1 {
+            from {
+              transform: scaleY(1);
+            }
+
+            to {
+              transform: scaleY(0.5);
+            }
+          }
+
+          @keyframes wave2 {
+            from {
+              transform: scaleY(0.3);
+            }
+
+            to {
+              transform: scaleY(0.6);
+            }
+          }
+
+          @keyframes wave3 {
+            from {
+              transform: scaleY(0.6);
+            }
+
+            to {
+              transform: scaleY(0.8);
+            }
+          }
+
+          @keyframes wave4 {
+            from {
+              transform: scaleY(0.2);
+            }
+
+            to {
+              transform: scaleY(0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+  .nextSong {
+    margin-top: 3rem;
+    height: 100%;
+    .titleNextSong {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        span {
+          font-weight: 900;
+          font-size: 1.7rem;
+        }
+      }
+
+      .viewAll {
+        font-size: 1.3rem;
+        color: var(--pink-light);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cardContainer {
+    margin-top: 2rem;
+    overflow-y: scroll;
+    // max-height: 12rem;
+
+    .card {
+      border: 1px solid var(--purple-color);
+      border-radius: 1rem;
+      padding: 1rem 1.5rem;
+      display: flex;
+      // flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      // gap: 2rem;
+
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+
+      &.active {
+        background-color: var(--pink-light);
+        border: none;
+        position: relative;
+        overflow: hidden;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.6rem;
+      }
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100%;
+      }
+
+      .card__des {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+
+        .card__des-container {
+          display: flex;
+          flex-direction: column;
+          .card__des-title {
+            color: var(--color-white);
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            max-width: 10rem;
+          }
+
+          .card__des-details {
+            display: flex;
+            gap: 0.5rem;
+            color: var(--font-color-gray);
+            font-size: 1.1rem;
+            .card__des-details-name {
+              max-width: 6rem;
+            }
+            .card__des-details-year {
+              max-width: 5rem;
+            }
+          }
+        }
+      }
+      .card__time {
+        color: var(--font-color-gray);
+        font-size: 1.1rem;
+        flex: 1;
+        text-align: right;
+      }
+    }
+
+    /* استایل اسکرول بار برای WebKit (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 8px; /* عرض اسکرول بار */
+      height: 8px; /* ارتفاع اسکرول بار برای اسکرول افقی */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; /* پس‌زمینه اسکرول بار */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #888; /* رنگ thumb */
+      border-radius: 10px; /* لبه‌های گرد */
+      border: 2px solid #f1f1f1; /* فاصله thumb از لبه */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555; /* تغییر رنگ thumb هنگام hover */
+    }
+
+    /* استایل اسکرول بار برای Firefox */
+    scrollbar-width: none; /* عرض نازک اسکرول بار */
+    scrollbar-color: #888 #f1f1f1; /* رنگ thumb و رنگ پس‌زمینه اسکرول بار */
+
+    /* استایل هنگام hover برای Firefox */
+    &::-moz-scrollbar-thumb:hover {
+      background-color: #555; /* تغییر رنگ thumb هنگام hover */
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .sidebar {
+    .cardContainer {
+      .card {
+        .card__des-title {
+          font-size: 1rem;
+        }
+
+        .card__des {
+          .card__des-details {
+            font-size: 0.8rem;
+          }
+        }
+
+        .card__time {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .currentSongPlay {
+    .songCard {
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    border-top: 1px solid var(--purple-color);
+    flex-basis: 40%;
+    scrollbar-width: none;
+    P {
+      max-width: initial;
+    }
+
+    // .cardContainer {
+    //   .card {
+    //     .card__des {
+    //       .card__des-container {
+    //         .card__des-title {
+    //           // max-width: 15rem;
+    //         }
+    //         .card__des-details {
+    //           .card__des-details-year {
+    //             // max-width: 15rem;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+
+    .currentSongPlay {
+      .songCard {
+        .songTitle {
+          font-weight: 900;
+          font-size: 1.5rem;
+          margin-block: 1.5rem;
+          letter-spacing: 0.2rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 900px) and (max-width: 1060px) {
+  .sidebar {
+    .currentSongPlay {
+      .songCard {
+        .songDetails {
+          gap: 0.7rem;
+        }
+      }
+    }
+  }
+}

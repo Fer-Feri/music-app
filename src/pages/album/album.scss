@@ -1,0 +1,37 @@
+/** @format */
+
+.card-artist-container {
+  .card {
+    min-width: 20rem;
+
+    .album__card-details {
+      width: 100%;
+      .album-details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: var(--color-white);
+
+        p {
+          max-width: 15rem;
+        }
+
+        .album__name-genre,
+        .album__track-date {
+          width: 100%;
+          font-size: 1.1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          flex: 1;
+          .pink {
+            color: var(--pink-beige);
+          }
+        }
+      }
+    }
+  }
+}

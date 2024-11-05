@@ -1,0 +1,51 @@
+/** @format */
+
+:root[data-theme="dark"] {
+  --main-color: #0f0d20;
+  --pink-color: #e33e9f;
+  --pink-light: #fe476e;
+  --pink-beige: #ffa1b5;
+  --purple-color: #4d25ae;
+  --font-color-gray: rgb(174, 173, 173);
+  --color-white: #ffffff;
+  --song-card: linear-gradient(
+    176deg,
+    rgba(15, 13, 32, 1) 0%,
+    rgba(93, 31, 79, 1) 100%,
+    rgba(93, 31, 79, 1) 100%,
+    rgba(227, 62, 159, 1) 100%
+  );
+  --content-color: linear-gradient(110deg, rgba(227, 62, 159, 1) -300%, rgba(15, 13, 32, 1) 100%);
+  --input-color: #0f0d20;
+}
+
+:root[data-theme="light"] {
+  --main-color: #f5f3f4;
+  --pink-color: #ff66b3;
+  --pink-light: #ff6f91;
+  --pink-beige: #eb4a75;
+  --purple-color: #8561c5;
+  --font-color-gray: rgb(70, 70, 70);
+  --color-white: black;
+  --song-card: linear-gradient(
+    176deg,
+    rgba(245, 243, 244, 1) 0%,
+    rgba(235, 226, 230, 1) 50%,
+    rgba(214, 201, 211, 1) 100%
+  );
+  --content-color: linear-gradient(
+    176deg,
+    rgba(245, 243, 244, 1) 0%,
+    rgba(235, 226, 230, 1) 50%,
+    rgba(214, 201, 211, 1) 100%
+  );
+  --input-color: rgba(214, 201, 211, 1);
+}
+
+// $main-color: #0f0d20;
+// $pink-color: #e33e9f;
+// $pink-light: #fe476e;
+// $pink-beige: #ffa1b5;
+// $purple-color: #4d25ae;
+// $font-color-white: #ffffff;
+// $font-color-gray: rgb(174, 173, 173);

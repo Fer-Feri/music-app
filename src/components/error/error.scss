@@ -1,0 +1,101 @@
+/** @format */
+
+.error__message {
+  width: 100%;
+  height: 80vh;
+  .card {
+    width: 80%;
+    height: 8rem;
+    margin: 6rem auto;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    .wave {
+      position: absolute;
+      transform: rotate(90deg);
+      left: -31px;
+      top: 32px;
+      width: 80px;
+      fill: #fc0c0c3a;
+    }
+
+    .icon-container {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fc0c0c48;
+      border-radius: 50%;
+      margin-left: 8px;
+
+      .icon {
+        width: 1.7rem;
+        height: 1.7rem;
+        color: #d10d0d;
+      }
+    }
+
+    .message-text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex-grow: 1;
+
+      .message-text {
+        margin: 0;
+        cursor: default;
+        color: #d10d0d;
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
+
+      .sub-text {
+        margin: 0;
+        cursor: default;
+        font-size: 1.4rem;
+        color: #555;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .error__message {
+    .card {
+      .message-text-container {
+        .message-text {
+          font-size: 1.3rem;
+        }
+
+        .sub-text {
+          font-size: 1.1rem;
+        }
+      }
+
+      .icon-container {
+        min-width: 2.5rem;
+        height: 2.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: #d10d0d;
+        }
+      }
+    }
+  }
+}
