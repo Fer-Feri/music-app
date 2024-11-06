@@ -11,7 +11,7 @@ import Radio from "../radio/Radio";
 import Like from "../like/Like";
 // import Browse from "../browse/Browse";
 import NotFound from "../notFound/NotFound";
-import Comment from "../comment/comment";
+import Comment from "../comment/Comment";
 import { useState } from "react";
 import SearchSongs from "../../components/search/SearchSongs";
 
