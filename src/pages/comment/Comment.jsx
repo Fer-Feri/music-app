@@ -7,7 +7,7 @@ import replyComment from "../../assets/images/reply-comment.jpg";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import ModalBtn from "../../components/modalBtn/ModalBtn";
-import CommentForm from "../../components/commentForm/commentForm";
+import CommentForm from "../../components/commentForm/CommentForm";
 
 const Comment = () => {
   const [isShowCommentForm, setIsShowCommentForm] = useState(false);
