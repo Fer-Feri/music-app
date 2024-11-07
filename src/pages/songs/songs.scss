@@ -45,7 +45,7 @@
       background-color: var(--pink-color);
 
       svg {
-        color: limegreen;
+        color: #f9e400;
       }
     }
 
@@ -65,6 +65,11 @@
       img {
         width: 100%;
         border-radius: 0.3rem;
+      }
+    }
+    &:hover {
+      .song__details {
+        color: white;
       }
     }
 
